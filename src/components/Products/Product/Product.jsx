@@ -1,12 +1,15 @@
 import React from 'react'
 import {Card,CardContent,CardMedia,CardActions,Typography,IconButton} from '@material-ui/core'
 import {AddShoppingCart} from '@material-ui/icons'
+import Pic1 from '../../../images/Shoe.jpg'
+import Pic2 from '../../../images/Mac.jpg'
 
 import useStyles from './styles'
 
 function Product({product}) {
     const classes = useStyles()
     return (
+        <>
         <Card className={classes.root}>
             <CardMedia className={classes.media} image={product.image} title={product.name}/>
             <CardContent>
@@ -28,6 +31,7 @@ function Product({product}) {
                 </IconButton>
             </CardActions>
         </Card>
+        </>
     )
 }
 
