@@ -6,7 +6,7 @@ import Pic2 from '../../../images/Mac.jpg'
 
 import useStyles from './styles'
 
-function Product({product}) {
+function Product({product,onAddtoCart}) {
     const classes = useStyles()
     console.log(product)
     return (
@@ -25,7 +25,7 @@ function Product({product}) {
                 <Typography dangerouslySetInnerHTML={{__html:product.description}} variant="body2" color="textSecondary"/>
             </CardContent>
             <CardActions disableSpacing className={classes.cardActions}>
-                <IconButton aria-label="Add to Cart">
+                <IconButton aria-label="Add to Cart" onClick={()=>onAddtoCart(product.id,1)}>
                     <AddShoppingCart/>
                 </IconButton>
             </CardActions>
